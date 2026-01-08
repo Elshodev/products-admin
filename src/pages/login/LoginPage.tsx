@@ -14,7 +14,6 @@ export default function Login() {
   const { login, isLoading, token } = useAuthStore();
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
-  // Subdomain'ni localStorage'dan o'qish
   const getStoredSubdomain = () => {
     const stored = localStorage.getItem("subdomain");
     return stored || "";
