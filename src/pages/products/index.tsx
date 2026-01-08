@@ -1,5 +1,5 @@
-import { useProductsData } from "./hooks/useProductsData";
-import { useProductsFilters } from "./hooks/useProductsFilters";
+import { useProductsData } from "@/hooks/useProductsData.ts";
+import { useProductsFilters } from "@/hooks/useProductsFilters.ts";
 import { useProductsColumns } from "./components/ProductsColumns";
 import { ProductsTable } from "./components/ProductsTable";
 import Loader from "@/components/Loader";

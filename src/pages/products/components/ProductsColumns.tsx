@@ -1,7 +1,7 @@
 import type { ColumnsType } from "antd/es/table";
 import { Variation } from "../types";
 import formatNumber from "@/utils/formatNumber";
-import { getColumnSearchProps } from "../utils/getColumnSearchProps";
+import { getColumnSearchProps } from "@/utils/getColumnSearchProps";
 
 interface UseProductsColumnsProps {
   setIdFilter: (value: string) => void;
