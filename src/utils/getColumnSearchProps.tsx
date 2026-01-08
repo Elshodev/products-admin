@@ -2,7 +2,7 @@ import { Input, Button, Space } from "antd";
 import type { ColumnType } from "antd/es/table";
 import { SearchOutlined } from "@ant-design/icons";
 import type { FilterDropdownProps } from "antd/es/table/interface";
-import { Variation } from "../types";
+import { Variation } from "@/pages/products/types";
 
 export const getColumnSearchProps = (
   setFilter: (value: string) => void,

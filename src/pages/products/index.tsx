@@ -6,6 +6,7 @@ import Loader from "@/components/Loader";
 
 function Products() {
   const { data, isLoading, isError, error } = useProductsData();
+
   const { filteredData, setFilters } = useProductsFilters(data);
   const columns = useProductsColumns({
     setIdFilter: setFilters.setIdFilter,
