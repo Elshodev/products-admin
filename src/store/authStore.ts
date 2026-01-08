@@ -1,6 +1,5 @@
 import { authAPI } from "@/lib/api";
 import { create } from "zustand";
-// --- Types ---
 
 interface LoginCredentials {
   login: string;
@@ -34,11 +33,12 @@ export const useAuthStore = create<AuthStore>((set) => ({
       localStorage.setItem("token", token);
       localStorage.setItem("subdomain", credentials.subdomain);
       set({ token: token });
-      return { success: true, message: "Вход успешный" };
+      return { success: true, message: "Kirish muvaffaqiyatli" };
     } catch (error: any) {
       return {
         success: false,
-        message: error?.response?.data?.message,
+        message:
+          error?.response?.data?.message || "Kirishda xatolik yuz berdi!",
       };
     } finally {
       set({ isLoading: false });

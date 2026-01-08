@@ -32,7 +32,7 @@ export default function Login() {
           navigate("/", { replace: true });
           return;
         } catch (error) {
-          console.log("Token invalid:", error);
+          console.log("Token noto'g'ri:", error);
         }
       }
       setIsCheckingAuth(false);
@@ -50,7 +50,7 @@ export default function Login() {
       toast.success(result.message);
       navigate("/");
     } else {
-      toast.error(result.message || "Ошибка входа!");
+      toast.error(result.message || "Kirishda xatolik yuz berdi!");
     }
   };
 
@@ -64,10 +64,12 @@ export default function Login() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm bg-white shadow-md rounded-2xl p-8 space-y-4"
       >
-        <h2 className="text-xl font-bold text-center text-main-black">Вход</h2>
+        <h2 className="text-xl font-bold text-center text-main-black">
+          Kirish
+        </h2>
         <CustomInput
-          label="Логин"
-          placeholder="Логин"
+          label="Login"
+          placeholder="Login"
           name="login"
           required
           value={form.login}
@@ -75,8 +77,8 @@ export default function Login() {
         />
         <CustomInput
           type="password"
-          label="Пароль"
-          placeholder="Пароль"
+          label="Parol"
+          placeholder="Parol"
           name="password"
           required
           value={form.password}
@@ -96,7 +98,7 @@ export default function Login() {
           disabled={isLoading}
           className="w-full py-2 px-4 disabled:cursor-not-allowed bg-main-orange rounded justify-center hover:!bg-main-orange/90 disabled:!bg-main-orange/50"
         >
-          {isLoading ? <Loader2 className="animate-spin w-4 h-4" /> : "Войти"}
+          {isLoading ? <Loader2 className="animate-spin w-4 h-4" /> : "Kirish"}
         </UniversalBtn>
       </form>
     </div>
