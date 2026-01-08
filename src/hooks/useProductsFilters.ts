@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Variation } from "../types";
+import { Variation } from "@/pages/products/types";
 import formatNumber from "@/utils/formatNumber";
 
 export const useProductsFilters = (data: Variation[]) => {
